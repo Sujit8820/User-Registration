@@ -11,6 +11,8 @@ namespace User_Registration
     {
         public static string REGEX_NAME = "^[A-Z][a-z]{2,}$";
         public static string REGEX_EMAIL = "^[a-z]{3,}(.[a-z]{3,})?@bl.co(.in)?$";
+        public static string REGEX_MOBILENO = "^91[ ][6-9]{1}[0-9]{9}$";
+
 
 
         public void ValidFirstName(string firstName)
@@ -28,6 +30,12 @@ namespace User_Registration
         public void ValidEmail(string email)
         {
             string validOrNot = Regex.IsMatch(email, REGEX_EMAIL) ? "email is valid" : "email is invalid";
+            Console.WriteLine($" {validOrNot}");
+        }
+
+        public void ValidMobileNo(string number)
+        {
+            string validOrNot = Regex.IsMatch(number, REGEX_MOBILENO) ? "Mobile number is valid" : "Mobile number is invalid";
             Console.WriteLine($" {validOrNot}");
         }
     }

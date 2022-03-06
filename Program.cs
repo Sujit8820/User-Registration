@@ -17,10 +17,15 @@ namespace User_Registration
             Console.Write("\nEnter last name: ");
             string lastName = Console.ReadLine();
             pattern.ValidLastName(lastName);
-*/
+
             Console.Write("\nEnter email: ");
             string email = Console.ReadLine();
-            pattern.ValidEmail(email);
+            pattern.ValidEmail(email);*/
+
+            Console.Write("\nEnter mobile number: ");
+            string number = Console.ReadLine();
+            pattern.ValidMobileNo(number);
+
 
 
 
