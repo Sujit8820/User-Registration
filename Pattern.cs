@@ -12,6 +12,8 @@ namespace User_Registration
         public static string REGEX_NAME = "^[A-Z][a-z]{2,}$";
         public static string REGEX_EMAIL = "^[a-z]{3,}(.[a-z]{3,})?@bl.co(.in)?$";
         public static string REGEX_MOBILENO = "^91[ ][6-9]{1}[0-9]{9}$";
+        public static string REGEX_PASSWARD = "^[a-zA-Z0-9]{8,}$";
+
 
 
 
@@ -36,6 +38,12 @@ namespace User_Registration
         public void ValidMobileNo(string number)
         {
             string validOrNot = Regex.IsMatch(number, REGEX_MOBILENO) ? "Mobile number is valid" : "Mobile number is invalid";
+            Console.WriteLine($" {validOrNot}");
+        }
+
+        public void ValidPassword(string password)
+        {
+            string validOrNot = Regex.IsMatch(password, REGEX_PASSWARD) ? "Password is valid" : "Password is invalid";
             Console.WriteLine($" {validOrNot}");
         }
     }

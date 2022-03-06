@@ -22,9 +22,13 @@ namespace User_Registration
             string email = Console.ReadLine();
             pattern.ValidEmail(email);*/
 
-            Console.Write("\nEnter mobile number: ");
+           /* Console.Write("\nEnter mobile number: ");
             string number = Console.ReadLine();
-            pattern.ValidMobileNo(number);
+            pattern.ValidMobileNo(number);*/
+
+            Console.Write("\nEnter password: ");
+            string password = Console.ReadLine();
+            pattern.ValidPassword(password);
 
 
 
