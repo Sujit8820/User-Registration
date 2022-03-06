@@ -10,9 +10,15 @@ namespace User_Registration
             Pattern pattern = new Pattern();
 
             Console.Write("Enter first name: ");
-            string name = Console.ReadLine();
+            string firstName = Console.ReadLine();
+            pattern.ValidFirstName(firstName);
 
-            pattern.ValidFirstName(name);
+
+            Console.Write("\nEnter last name: ");
+            string lastName = Console.ReadLine();
+            pattern.ValidLastName(lastName);
+
+
 
         }
 

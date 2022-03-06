@@ -9,12 +9,19 @@ namespace User_Registration
 {
     public class Pattern
     {
-        public static string REGEX_FIRSTNAME = "^[A-Z][a-z]{2,}$";
+        public static string REGEX_NAME = "^[A-Z][a-z]{2,}$";
 
         public void ValidFirstName(string firstName)
         {
-            string validOrNot = Regex.IsMatch(firstName, REGEX_FIRSTNAME) ? "First name is valid" : "First name is invalid";
-            Console.WriteLine($"\n {validOrNot}");
+            string validOrNot = Regex.IsMatch(firstName, REGEX_NAME) ? "First name is valid" : "First name is invalid";
+            Console.WriteLine($" {validOrNot}");
+        }
+
+
+        public void ValidLastName(string lastName)
+        {
+            string validOrNot = Regex.IsMatch(lastName, REGEX_NAME) ? "Last name is valid" : "Last name is invalid";
+            Console.WriteLine($" {validOrNot}");
         }
     }
 }
