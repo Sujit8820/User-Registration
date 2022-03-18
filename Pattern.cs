@@ -13,6 +13,7 @@ namespace User_Registration
         public static string REGEX_EMAIL = "^[a-z]{3,}(.[a-z]{3,})?@bl.co(.in)?$";
         public static string REGEX_MOBILENO = "^91[ ][6-9]{1}[0-9]{9}$";
         public static string REGEX_PASSWARD = "^(?=.*[!@#$%^&*]{1})(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9@$!%*#?&]{8,}$";
+        public static string ALL_EMAIL = "^[a-z]{3,}(([.|+]{1})?([-]{1})?[0-9]{1,})?@[a-z0-9]{1,}.[a-z]{3}(.[a-z]{2,4})?$";
 
 
 
@@ -45,6 +46,12 @@ namespace User_Registration
         public void ValidPassword(string password)
         {
             string validOrNot = Regex.IsMatch(password, REGEX_PASSWARD) ? "Password is valid" : "Password is invalid";
+            Console.WriteLine($" {validOrNot}");
+        }
+
+        public void ValidAllEmail(string AllEmail)
+        {
+            string validOrNot = Regex.IsMatch(AllEmail, ALL_EMAIL) ? AllEmail + " is valid email" : AllEmail+" is invalid email";
             Console.WriteLine($" {validOrNot}");
         }
     }

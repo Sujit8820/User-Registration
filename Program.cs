@@ -26,12 +26,18 @@ namespace User_Registration
             string number = Console.ReadLine();
             pattern.ValidMobileNo(number);
 */
-            Console.Write("\nEnter password: ");
+           /* Console.Write("\nEnter password: ");
             string password = Console.ReadLine();
-            pattern.ValidPassword(password);
+            pattern.ValidPassword(password);*/
 
-
-
+            string[] AllEmail = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com",
+                "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", 
+                "abc+100@gmail.com", "abc@.com.my", ".abc@abc.com",
+                "abc@abc@gmail.com", "abc..2002@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+            foreach(string email in AllEmail)
+            {
+                pattern.ValidAllEmail(email);
+            }
 
         }
 
